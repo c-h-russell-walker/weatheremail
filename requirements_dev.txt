@@ -1,0 +1,5 @@
+-r requirements.txt
+
+django-extensions==1.6.7  # adds shell_plus, runserver_plus
+ipdb==0.10.2
+werkzeug==0.12.1
