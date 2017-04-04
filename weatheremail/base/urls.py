@@ -4,6 +4,6 @@ from base import views
 
 urlpatterns = [
     url(r'$',
-        views.TestView.as_view(),
-        name='test_view'),
+        views.SignUpView.as_view(),
+        name='signup_view'),
 ]
