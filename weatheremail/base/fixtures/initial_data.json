@@ -1,0 +1,1815 @@
+[
+  {
+    "model": "base.state",
+    "pk": "AL",
+    "fields": {
+      "name": "Alabama"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "AK",
+    "fields": {
+      "name": "Alaska"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "AS",
+    "fields": {
+      "name": "American Samoa"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "AZ",
+    "fields": {
+      "name": "Arizona"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "AR",
+    "fields": {
+      "name": "Arkansas"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "CA",
+    "fields": {
+      "name": "California"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "CO",
+    "fields": {
+      "name": "Colorado"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "CT",
+    "fields": {
+      "name": "Connecticut"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "DE",
+    "fields": {
+      "name": "Delaware"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "DC",
+    "fields": {
+      "name": "District Of Columbia"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "FM",
+    "fields": {
+      "name": "Federated States Of Micronesia"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "FL",
+    "fields": {
+      "name": "Florida"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "GA",
+    "fields": {
+      "name": "Georgia"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "GU",
+    "fields": {
+      "name": "Guam"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "HI",
+    "fields": {
+      "name": "Hawaii"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "ID",
+    "fields": {
+      "name": "Idaho"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "IL",
+    "fields": {
+      "name": "Illinois"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "IN",
+    "fields": {
+      "name": "Indiana"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "IA",
+    "fields": {
+      "name": "Iowa"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "KS",
+    "fields": {
+      "name": "Kansas"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "KY",
+    "fields": {
+      "name": "Kentucky"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "LA",
+    "fields": {
+      "name": "Louisiana"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "ME",
+    "fields": {
+      "name": "Maine"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "MH",
+    "fields": {
+      "name": "Marshall Islands"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "MD",
+    "fields": {
+      "name": "Maryland"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "MA",
+    "fields": {
+      "name": "Massachusetts"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "MI",
+    "fields": {
+      "name": "Michigan"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "MN",
+    "fields": {
+      "name": "Minnesota"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "MS",
+    "fields": {
+      "name": "Mississippi"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "MO",
+    "fields": {
+      "name": "Missouri"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "MT",
+    "fields": {
+      "name": "Montana"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "NE",
+    "fields": {
+      "name": "Nebraska"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "NV",
+    "fields": {
+      "name": "Nevada"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "NH",
+    "fields": {
+      "name": "New Hampshire"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "NJ",
+    "fields": {
+      "name": "New Jersey"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "NM",
+    "fields": {
+      "name": "New Mexico"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "NY",
+    "fields": {
+      "name": "New York"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "NC",
+    "fields": {
+      "name": "North Carolina"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "ND",
+    "fields": {
+      "name": "North Dakota"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "MP",
+    "fields": {
+      "name": "Northern Mariana Islands"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "OH",
+    "fields": {
+      "name": "Ohio"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "OK",
+    "fields": {
+      "name": "Oklahoma"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "OR",
+    "fields": {
+      "name": "Oregon"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "PW",
+    "fields": {
+      "name": "Palau"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "PA",
+    "fields": {
+      "name": "Pennsylvania"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "PR",
+    "fields": {
+      "name": "Puerto Rico"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "RI",
+    "fields": {
+      "name": "Rhode Island"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "SC",
+    "fields": {
+      "name": "South Carolina"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "SD",
+    "fields": {
+      "name": "South Dakota"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "TN",
+    "fields": {
+      "name": "Tennessee"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "TX",
+    "fields": {
+      "name": "Texas"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "UT",
+    "fields": {
+      "name": "Utah"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "VT",
+    "fields": {
+      "name": "Vermont"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "VI",
+    "fields": {
+      "name": "Virgin Islands"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "VA",
+    "fields": {
+      "name": "Virginia"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "WA",
+    "fields": {
+      "name": "Washington"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "WV",
+    "fields": {
+      "name": "West Virginia"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "WI",
+    "fields": {
+      "name": "Wisconsin"
+    }
+  },
+  {
+    "model": "base.state",
+    "pk": "WY",
+    "fields": {
+      "name": "Wyoming"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "New York",
+      "state": "NY"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Los Angeles",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Chicago",
+      "state": "IL"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Houston",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Philadelphia",
+      "state": "PA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Phoenix",
+      "state": "AZ"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "San Antonio",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "San Diego",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Dallas",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "San Jose",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Austin",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Indianapolis",
+      "state": "IN"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Jacksonville",
+      "state": "FL"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "San Francisco",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Columbus",
+      "state": "OH"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Charlotte",
+      "state": "NC"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Fort Worth",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Detroit",
+      "state": "MI"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "El Paso",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Memphis",
+      "state": "TN"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Seattle",
+      "state": "WA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Denver",
+      "state": "CO"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Washington",
+      "state": "DC"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Boston",
+      "state": "MA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Nashville-Davidson",
+      "state": "TN"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Baltimore",
+      "state": "MD"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Oklahoma City",
+      "state": "OK"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Louisville/Jefferson County",
+      "state": "KY"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Portland",
+      "state": "OR"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Las Vegas",
+      "state": "NV"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Milwaukee",
+      "state": "WI"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Albuquerque",
+      "state": "NM"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Tucson",
+      "state": "AZ"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Fresno",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Sacramento",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Long Beach",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Kansas City",
+      "state": "MO"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Mesa",
+      "state": "AZ"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Virginia Beach",
+      "state": "VA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Atlanta",
+      "state": "GA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Colorado Springs",
+      "state": "CO"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Omaha",
+      "state": "NE"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Raleigh",
+      "state": "NC"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Miami",
+      "state": "FL"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Oakland",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Minneapolis",
+      "state": "MN"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Tulsa",
+      "state": "OK"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Cleveland",
+      "state": "OH"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Wichita",
+      "state": "KS"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Arlington",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "New Orleans",
+      "state": "LA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Bakersfield",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Tampa",
+      "state": "FL"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Honolulu",
+      "state": "HI"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Aurora",
+      "state": "CO"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Anaheim",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Santa Ana",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "St. Louis",
+      "state": "MO"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Riverside",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Corpus Christi",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Lexington-Fayette",
+      "state": "KY"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Pittsburgh",
+      "state": "PA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Anchorage",
+      "state": "AK"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Stockton",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Cincinnati",
+      "state": "OH"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "St. Paul",
+      "state": "MN"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Toledo",
+      "state": "OH"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Greensboro",
+      "state": "NC"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Newark",
+      "state": "NJ"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Plano",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Henderson",
+      "state": "NV"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Lincoln",
+      "state": "NE"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Buffalo",
+      "state": "NY"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Jersey City",
+      "state": "NJ"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Chula Vista",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Fort Wayne",
+      "state": "IN"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Orlando",
+      "state": "FL"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "St. Petersburg",
+      "state": "FL"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Chandler",
+      "state": "AZ"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Laredo",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Norfolk",
+      "state": "VA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Durham",
+      "state": "NC"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Madison",
+      "state": "WI"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Lubbock",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Irvine",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Winston-Salem",
+      "state": "NC"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Glendale",
+      "state": "AZ"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Garland",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Hialeah",
+      "state": "FL"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Reno",
+      "state": "NV"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Chesapeake",
+      "state": "VA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Gilbert",
+      "state": "AZ"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Baton Rouge",
+      "state": "LA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Irving",
+      "state": "TX"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Scottsdale",
+      "state": "AZ"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "North Las Vegas",
+      "state": "NV"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Fremont",
+      "state": "CA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Boise City",
+      "state": "ID"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "Richmond",
+      "state": "VA"
+    }
+  },
+  {
+    "model": "base.city",
+    "fields": {
+      "name": "San Bernardino",
+      "state": "CA"
+    }
+  },
+    {
+    "model": "base.location",
+    "fields": {
+      "city": "New York",
+      "rank": "1"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Los Angeles",
+      "rank": "2"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Chicago",
+      "rank": "3"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Houston",
+      "rank": "4"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Philadelphia",
+      "rank": "5"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Phoenix",
+      "rank": "6"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "San Antonio",
+      "rank": "7"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "San Diego",
+      "rank": "8"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Dallas",
+      "rank": "9"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "San Jose",
+      "rank": "10"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Austin",
+      "rank": "11"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Indianapolis",
+      "rank": "12"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Jacksonville",
+      "rank": "13"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "San Francisco",
+      "rank": "14"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Columbus",
+      "rank": "15"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Charlotte",
+      "rank": "16"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Fort Worth",
+      "rank": "17"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Detroit",
+      "rank": "18"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "El Paso",
+      "rank": "19"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Memphis",
+      "rank": "20"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Seattle",
+      "rank": "21"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Denver",
+      "rank": "22"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Washington",
+      "rank": "23"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Boston",
+      "rank": "24"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Nashville-Davidson",
+      "rank": "25"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Baltimore",
+      "rank": "26"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Oklahoma City",
+      "rank": "27"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Louisville/Jefferson County",
+      "rank": "28"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Portland",
+      "rank": "29"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Las Vegas",
+      "rank": "30"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Milwaukee",
+      "rank": "31"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Albuquerque",
+      "rank": "32"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Tucson",
+      "rank": "33"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Fresno",
+      "rank": "34"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Sacramento",
+      "rank": "35"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Long Beach",
+      "rank": "36"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Kansas City",
+      "rank": "37"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Mesa",
+      "rank": "38"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Virginia Beach",
+      "rank": "39"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Atlanta",
+      "rank": "40"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Colorado Springs",
+      "rank": "41"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Omaha",
+      "rank": "42"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Raleigh",
+      "rank": "43"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Miami",
+      "rank": "44"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Oakland",
+      "rank": "45"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Minneapolis",
+      "rank": "46"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Tulsa",
+      "rank": "47"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Cleveland",
+      "rank": "48"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Wichita",
+      "rank": "49"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Arlington",
+      "rank": "50"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "New Orleans",
+      "rank": "51"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Bakersfield",
+      "rank": "52"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Tampa",
+      "rank": "53"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Honolulu",
+      "rank": "54"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Aurora",
+      "rank": "55"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Anaheim",
+      "rank": "56"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Santa Ana",
+      "rank": "57"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "St. Louis",
+      "rank": "58"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Riverside",
+      "rank": "59"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Corpus Christi",
+      "rank": "60"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Lexington-Fayette",
+      "rank": "61"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Pittsburgh",
+      "rank": "62"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Anchorage",
+      "rank": "63"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Stockton",
+      "rank": "64"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Cincinnati",
+      "rank": "65"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "St. Paul",
+      "rank": "66"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Toledo",
+      "rank": "67"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Greensboro",
+      "rank": "68"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Newark",
+      "rank": "69"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Plano",
+      "rank": "70"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Henderson",
+      "rank": "71"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Lincoln",
+      "rank": "72"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Buffalo",
+      "rank": "73"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Jersey City",
+      "rank": "74"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Chula Vista",
+      "rank": "75"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Fort Wayne",
+      "rank": "76"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Orlando",
+      "rank": "77"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "St. Petersburg",
+      "rank": "78"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Chandler",
+      "rank": "79"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Laredo",
+      "rank": "80"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Norfolk",
+      "rank": "81"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Durham",
+      "rank": "82"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Madison",
+      "rank": "83"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Lubbock",
+      "rank": "84"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Irvine",
+      "rank": "85"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Winston-Salem",
+      "rank": "86"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Glendale",
+      "rank": "87"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Garland",
+      "rank": "88"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Hialeah",
+      "rank": "89"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Reno",
+      "rank": "90"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Chesapeake",
+      "rank": "91"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Gilbert",
+      "rank": "92"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Baton Rouge",
+      "rank": "93"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Irving",
+      "rank": "94"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Scottsdale",
+      "rank": "95"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "North Las Vegas",
+      "rank": "96"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Fremont",
+      "rank": "97"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Boise City",
+      "rank": "98"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "Richmond",
+      "rank": "99"
+    }
+  },
+  {
+    "model": "base.location",
+    "fields": {
+      "city": "San Bernardino",
+      "rank": "100"
+    }
+  }
+]

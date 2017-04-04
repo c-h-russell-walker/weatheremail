@@ -1,3 +1,4 @@
+from django.db import IntegrityError
 from django.shortcuts import render
 from django.utils.decorators import method_decorator
 from django.views.generic import View
@@ -13,7 +14,7 @@ class SignUpView(View):
 
     def get(self, request, *args, **kwargs):
         context = {
-            'form': SignUpForm(request.GET)
+            'form': SignUpForm()
         }
         return render(request=request, template_name='signup.html', context=context)
 
@@ -25,8 +26,14 @@ class SignUpView(View):
         }
 
         if form.is_valid():
-            print('do our model saving here')
-            return render(request=request, template_name='success.html', context=context)
-        else:
-            # TODO - Is there more we want to do besides just show them an error?
-            return render(request=request, template_name='signup.html', context=context)
+            try:
+                weather_user = form.save()
+                context['email'] = weather_user.email
+                return render(request=request, template_name='success.html', context=context)
+            except IntegrityError:
+                # TODO - we log something? - use messages to show something to FE user?
+                pass
+
+        # TODO - Is there more we want to do besides just show them an error?
+        return render(request=request, template_name='signup.html', context=context)
+

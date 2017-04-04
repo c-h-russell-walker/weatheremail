@@ -11,10 +11,6 @@
                 <legend>Weather Powered Email</legend>
                 {% csrf_token %}
                 {{ form }}
-                {% comment %}
-                    TODO - make sure the inputs' labels are 'Email Address' and 'Location'
-                    also, the location dropdown has a placeholder value of 'Where do you live?'
-                {% endcomment %}
                 <input type="submit" value="Subscribe" />
             </fieldset>
         </form>
