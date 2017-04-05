@@ -1,18 +1,12 @@
-<html>
-{% comment %}
-    TODO - break this out into partial templates
-{% endcomment %}
-    <head>
-        <title>Personalized Weather Email</title>
-    </head>
-    <body>
-        <form action="/" method="POST">
-            <fieldset>
-                <legend>Weather Powered Email</legend>
-                {% csrf_token %}
-                {{ form }}
-                <input type="submit" value="Subscribe" />
-            </fieldset>
-        </form>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/" method="POST">
+    <fieldset>
+        <legend>Weather Powered Email</legend>
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Subscribe" />
+    </fieldset>
+</form>
+{% endblock %}

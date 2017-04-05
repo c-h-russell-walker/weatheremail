@@ -1,13 +1,7 @@
-<html>
-{% comment %}
-    TODO - break this out into partial templates
-{% endcomment %}
-    <head>
-        <title>Personalized Weather Email</title>
-    </head>
-    <body>
-        <h1>Success.</h1>
-        <p>We've signed up {{ email }} for daily weather emails.</p>
-        <p>Thank You!</p>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Success.</h1>
+    <p>We've signed up {{ email }} for daily weather emails.</p>
+    <p>Thank You!</p>
+{% endblock %}
