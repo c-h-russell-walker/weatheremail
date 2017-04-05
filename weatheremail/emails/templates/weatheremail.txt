@@ -1,1 +1,8 @@
-{{ weather_data }}
+Hi, {{ user_name }}
+
+Currently in {{ location_string }} it's:
+{{ temp_string }}
+and
+{{ weather_string }}
+
+Data supplied by: Wunderground API
