@@ -26,8 +26,7 @@ class City(models.Model):
 
     @property
     def slug(self):
-        # Slug will be used for Wunderground weather API
-        raise NotImplementedError
+        return self.name.replace(' ', '_')
 
 
 class Location(models.Model):

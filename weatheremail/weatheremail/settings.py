@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # our apps
     'base',
+    'emails',
 
     # third-party apps
     'django_extensions',
@@ -126,3 +127,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Celery/RabbitMQ Settings (currently just for dev.)
+BROKER_URL = "memory://localhost/"
+
+# Custom settings
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'c.russell.walker@gmail.com'
+EMAIL_HOST_PASSWORD = 'YOU_WISH_YOU_KNEW'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+FROM_EMAIL = 'c.russell.walker@gmail.com'
+
+WUNDERGROUND = {
+    'api_url': 'http://api.wunderground.com/api/',
+    'key': '4d870c66175b8c85',
+}

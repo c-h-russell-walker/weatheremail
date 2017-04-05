@@ -25,3 +25,15 @@ In virtualenv (venv) cd into app:
 Then run:
 `./manage.py runserver_plus`
 (To be in virtualenv run `source venv/bin/activate` in the repo dir.)
+
+
+## To run celery task(s):
+
+Pre-Req. - RabbitMQ installed (I used: `brew install rabbitmq` - for Mac)
+
+Run rabbitmq (in terminal):
+`brew services start rabbitmq`
+
+Inside VM (venv):
+`celery -A weatheremail worker -l info`
+
