@@ -2,7 +2,12 @@
 
 ## What follows is potentially a living document on setting up this app. TODOs will be added.
 
-## Pre-reqs - be sure to have 'virtualenv' available form the command line:
+## NOTE about emails:
+I've set up an app using my personal email and obviously have not committed the password to it:
+
+`EMAIL_HOST_PASSWORD = 'YOU_WISH_YOU_KNEW'`
+
+## Pre-reqs - be sure to have 'virtualenv' available from the command line:
 `virtualenv --version`
 If not install using:
 `pip install virtualenv`
@@ -19,6 +24,19 @@ source venv/bin/activate
 (inside VM)
 `pip install -r requirements.txt` OR `pip install -r requirements_dev.txt`
 
+
+## Before running the app do the needed DB migrations:
+In virtualenv (venv) cd into app:
+`cd weatheremail`
+Then run:
+`./manage.py migrate`
+
+Also you can create a superuser (not currently used for this app though):
+`./manage.py createsuperuser`
+You can use this to log in to:
+http://127.0.0.1:8000/admin/
+
+
 ## To run:
 In virtualenv (venv) cd into app:
 `cd weatheremail`
@@ -27,13 +45,19 @@ Then run:
 (To be in virtualenv run `source venv/bin/activate` in the repo dir.)
 
 
-## To run celery task(s):
+## To run celery task(s) - We'll be running celery as well as celery beat (each in their own terminal tab/window):
 
 Pre-Req. - RabbitMQ installed (I used: `brew install rabbitmq` - for Mac)
 
 Run rabbitmq (in terminal):
 `brew services start rabbitmq`
 
-Inside VM (venv):
+Run each of these inside the VM (venv) in its own terminal tab/window:
+(cd into app for each command)
+`cd weatheremail`
 `celery -A weatheremail worker -l info`
 
+`cd weatheremail`
+`celery -A weatheremail beat`
+
+#### * To note, the periodic task that queues up the email tasks per each user is set currently to run at 10am

@@ -49,10 +49,11 @@ coverage.xml
 *.mo
 *.pot
 
-# Django stuff:
+# Django and extensions stuff:
 *.log
 local_settings.py
 *.sqlite3
+*celerybeat-schedule.db
 
 # Scrapy stuff:
 .scrapy

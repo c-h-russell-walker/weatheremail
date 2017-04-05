@@ -131,12 +131,14 @@ class SendWeatherEmail(Task):
             pass
 
 
-class TestPeriodicTask(PeriodicTask):
+class EmailUsersPeriodicTask(PeriodicTask):
     run_every = crontab(minute=0, hour=10)
 
     def run(self, *args, **kwargs):
-        print('we\'re running periodically')
-
+        """
+            Using .iterator() is better for memory consumption - from the docs:
+            `iterator() will read results directly, without doing any caching at the QuerySet`
+        """
         for user in WeatherUser.objects.iterator():
-            TestTask.delay(user.id)
+            SendWeatherEmail.delay(user.id)
 
