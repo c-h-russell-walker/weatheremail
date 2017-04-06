@@ -49,7 +49,6 @@ class Location(models.Model):
 
 
 class WeatherUser(User):
-    # TODO - Confirm our primary key will be large enough type to auto increment to multi millions
     user = models.OneToOneField(User)
     location = models.ForeignKey(Location)
 

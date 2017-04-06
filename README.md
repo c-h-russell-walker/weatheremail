@@ -1,6 +1,8 @@
 # WeatherEmail
 
-## What follows is potentially a living document on setting up this app. TODOs will be added.
+For notes on some technical ideas about sacling this app please, [see this doc](./doc/notes.md).
+
+## What follows is a living document on setting up this app.
 
 ## NOTE about emails:
 I've set up an app using my personal email and obviously have not committed the password to it:
