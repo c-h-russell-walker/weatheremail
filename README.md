@@ -39,6 +39,13 @@ You can use this to log in to:
 http://127.0.0.1:8000/admin/
 
 
+## To run unit tests:
+In virtualenv (venv) cd into app:
+`cd weatheremail`
+Then run:
+`./manage.py test`
+
+
 ## To run:
 In virtualenv (venv) cd into app:
 `cd weatheremail`
