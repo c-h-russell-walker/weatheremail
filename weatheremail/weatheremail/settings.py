@@ -110,6 +110,37 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# Logging setup - for now just a local version
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '{}/debug.log'.format(BASE_DIR),
+        },
+        'app': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '{}/app.log'.format(BASE_DIR),
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'weatheremail.base.forms': {
+            'handlers': ['app'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
