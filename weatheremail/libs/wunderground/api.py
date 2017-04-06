@@ -1,3 +1,4 @@
+import logging
 import requests
 
 from decimal import Decimal
@@ -10,6 +11,7 @@ class WundergroundAPIException(Exception):
 
 
 class WundergroundAPI(object):
+    logger = logging.getLogger('weatheremail.libs.wunderground.WundergroundAPI')
 
     def __init__(self):
         self.base_url = '{api}{key}/'.format(
@@ -29,16 +31,20 @@ class WundergroundAPI(object):
         )
 
         try:
-            # TODO - validate the returned status code - use above exceptions
+            self.logger.debug('About to make wunderground request: {}'.format(url))
             resp = requests.get(url)
+            if resp.status_code != requests.codes.ok:
+                raise WundergroundAPIException(resp.status_code)
+
             hist_data = resp.json()
 
             norm_high = Decimal(hist_data.get('almanac').get('temp_high').get('normal').get('F'))
             norm_low = Decimal(hist_data.get('almanac').get('temp_low').get('normal').get('F'))
             return (norm_high + norm_low) / 2
         except Exception:
-            # TODO - something here.
-            pass
+            # Would be cool to use 'Exception Chaining' here - https://www.python.org/dev/peps/pep-3134/
+            self.logger.warning('Unexpected wunderground exception - get_average_temp()', exc_info=True)
+            raise WundergroundAPIException(str(exc))
 
 
     def get_weather(self, state_abbrev, city_slug):
@@ -49,9 +55,12 @@ class WundergroundAPI(object):
         )
 
         try:
-            # TODO - validate the returned status code
+            self.logger.debug('About to make wunderground request: {}'.format(url))
             resp = requests.get(url)
+            if resp.status_code != requests.codes.ok:
+                raise WundergroundAPIException(resp.status_code)
             return resp.json()
-        except Exception:
-            # TODO - something here.
-            pass
+        except Exception as exc:
+            # Would be cool to use 'Exception Chaining' here - https://www.python.org/dev/peps/pep-3134/
+            self.logger.warning('Unexpected wunderground exception - get_weather()', exc_info=True)
+            raise WundergroundAPIException(str(exc))

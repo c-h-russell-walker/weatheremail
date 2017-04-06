@@ -1,3 +1,5 @@
+import logging
+
 from decimal import Decimal
 
 from celery.schedules import crontab
@@ -7,7 +9,7 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
 from base.models import WeatherUser
-from libs.wunderground.api import WundergroundAPI
+from libs.wunderground.api import WundergroundAPI, WundergroundAPIException
 from libs.wunderground.helpers import sunny, precipitating
 
 
@@ -34,12 +36,14 @@ Obviously if we can batch requests with an API that will help with our amount of
 """
 
 class SendWeatherEmail(Task):
+    logger = logging.getLogger('weatheremail.emails.tasks.SendWeatherEmail')
     """
         TODO - do we want to alter max_retries, default_retry_delay or add name?
     """
 
     def run(self, user_id, *args, **kwargs):
         try:
+            self.logger.debug('Running SendWeatherEmailTask')
             wapi = WundergroundAPI()
             user = WeatherUser.objects.get(pk=user_id)
 
@@ -74,8 +78,11 @@ class SendWeatherEmail(Task):
                 html_message=msg_html,
             )
 
+        except WundergroundAPIException as exc:
+            self.logger.warning('Got a WundergroundAPIException in SendWeatherEmail Task', exc_info=True)
+            SendWeatherEmail.retry(exc=exc)
         except Exception as exc:
-            # TODO - Add logging
+            self.logger.warning('Unexpected Exception in SendWeatherEmail Task', exc_info=True)
             SendWeatherEmail.retry(exc=exc)
 
     def get_subject_line(self, forecast_icon, curr_temp, avg_temp):
@@ -95,6 +102,7 @@ class SendWeatherEmail(Task):
 
 
 class EmailUsersPeriodicTask(PeriodicTask):
+    logger = logging.getLogger('weatheremail.emails.tasks.EmailUsersPeriodicTask')
     run_every = crontab(minute=0, hour=10)
 
     def run(self, *args, **kwargs):
@@ -109,5 +117,6 @@ class EmailUsersPeriodicTask(PeriodicTask):
             # TODO - we should concern ourselves with batching when we get >= million rows
                 # We could use a raw query even too??
         """
+        self.logger.info('Running EmailUsersPeriodicTask')
         for user_id in WeatherUser.objects.values_list('id', flat=True).iterator():
             SendWeatherEmail.delay(user_id)

@@ -137,6 +137,16 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': True,
         },
+        'weatheremail.emails.tasks': {
+            'handlers': ['app'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'weatheremail.libs.wunderground': {
+            'handlers': ['app'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
     },
 }
 
