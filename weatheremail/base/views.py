@@ -26,13 +26,10 @@ class SignUpView(View):
         }
 
         if form.is_valid():
-            try:
-                weather_user = form.save()
-                context['email'] = weather_user.email
-                return render(request=request, template_name='success.html', context=context)
-            except IntegrityError:
-                # TODO - we log something? - use messages to show something to FE user?
-                pass
+            # We have custom validation on the email to make sure user doesn't already exist
+            weather_user = form.save()
+            context['email'] = weather_user.email
+            return render(request=request, template_name='success.html', context=context)
 
         # TODO - Is there more we want to do besides just show them an error?
         return render(request=request, template_name='signup.html', context=context)
