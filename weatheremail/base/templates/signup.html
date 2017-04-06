@@ -5,8 +5,8 @@
     <fieldset>
         <legend>Weather Powered Email</legend>
         {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Subscribe" />
+        {{ form.as_p }}
+        <input type="submit" value="Subscribe" class="btn btn-lg btn-success" />
     </fieldset>
 </form>
 {% endblock %}
