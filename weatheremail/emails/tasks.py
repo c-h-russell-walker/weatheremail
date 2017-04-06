@@ -138,7 +138,13 @@ class EmailUsersPeriodicTask(PeriodicTask):
         """
             Using .iterator() is better for memory consumption - from the docs:
             `iterator() will read results directly, without doing any caching at the QuerySet`
-        """
-        for user in WeatherUser.objects.iterator():
-            SendWeatherEmail.delay(user.id)
 
+            Also using values_list for memory consumption - from the docs:
+            `...values_list() ... intended as optimizations for a specific use case: retrieving
+            a subset of data without the overhead of creating a model instance`
+
+            # TODO - we should concern ourselves with batching when we get >= million rows
+                # We could use a raw query even too??
+        """
+        for user_id in WeatherUser.objects.values_list('id', flat=True).iterator():
+            SendWeatherEmail.delay(user_id)
