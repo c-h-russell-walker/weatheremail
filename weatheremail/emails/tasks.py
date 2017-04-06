@@ -1,5 +1,3 @@
-import requests
-
 from decimal import Decimal
 
 from celery.schedules import crontab
@@ -9,7 +7,31 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
 from base.models import WeatherUser
+from libs.wunderground.api import WundergroundAPI
+from libs.wunderground.helpers import sunny, precipitating
 
+
+""" TODO (Architectural notes):
+Soooo I realized once porting the http requests to their own client that there's no reason we need
+to do them for the same actual location (not user location) more than once - meaning no point in making the
+same call for Boston, MA repeatedly
+Also we shouldn't have the tasks spun up for each user wait synchronously on those API calls
+
+Another thought is we can get the historical data used for average temperature really at any point - we could
+decide on when it would be considered 'stale' for a location re-fetch (thinking about using a postsave signal
+for when a user signs up)
+
+So my thoughts are that we could have another periodic task that fires before the current one
+This task could make the API calls for each unique location we have in our DB
+and save the results to another table maybe
+
+EDGE CASE consideration:
+We can have some exception handling flow control in our current per-user-task that would indeed make the
+API calls - if for instance a user signs up with a new location we haven't gotten the data for yet
+
+Also,
+Obviously if we can batch requests with an API that will help with our amount of calls as well
+"""
 
 class SendWeatherEmail(Task):
     """
@@ -18,9 +40,13 @@ class SendWeatherEmail(Task):
 
     def run(self, user_id, *args, **kwargs):
         try:
+            wapi = WundergroundAPI()
             user = WeatherUser.objects.get(pk=user_id)
 
-            weather_data = self.get_weather(user.location.city)
+            state_abbrev = user.location.city.state.abbreviation
+            city_slug = user.location.city.slug
+
+            weather_data = wapi.get_weather(state_abbrev=state_abbrev, city_slug=city_slug)
 
             curr_obsv = weather_data.get('current_observation')
             template_data = {
@@ -36,10 +62,10 @@ class SendWeatherEmail(Task):
             subject = self.get_subject_line(
                 forecast_icon=curr_obsv.get('icon'),
                 curr_temp=Decimal(curr_obsv.get('temp_f')),
-                avg_temp=self.get_average_temp(user.location.city)
+                avg_temp=wapi.get_average_temp(state_abbrev=state_abbrev, city_slug=city_slug)
             )
 
-
+            # Once concerned with scale we should use an email service not directly tied to Django
             send_mail(
                 subject=subject,
                 message=msg_plain,
@@ -58,77 +84,14 @@ class SendWeatherEmail(Task):
             https://serbian.wunderground.com/weather/api/d/docs?d=resources/phrase-glossary&MR=1#forecast_description_phrases
             NOTE: assumptions have been made about the specs. for this project (per curr. weather precip/sunny)
         """
-        sunny_values = [
-            'clear',
-            'partlysunny',
-            'mostlysunny',
-            'sunny',
-        ]
-
-        precip_values = [
-            'flurries',
-            'sleet',
-            'rain',
-            'snow',
-            'tstorms',
-        ]
-
-        # either sunny or 5 degrees warmer
         temp_diff = curr_temp - avg_temp
 
-        if temp_diff >= 5 or forecast_icon in sunny_values:
+        if temp_diff >= 5 or sunny(forecast_icon):
             return "It's nice out! Enjoy a discount on us."
-        elif temp_diff <= 5 or forecast_icon in precip_values:
+        elif temp_diff <= 5 or precipitating(forecast_icon):
             return "Not so nice out? That's okay, enjoy a discount on us."
         else:
             return "Enjoy a discount on us."
-
-    def get_average_temp(self, city):
-        """
-            TODO - We could DRY this code up and create an API client/wrapper
-                main diff is just 'almanac' versus 'conditions'
-
-            I've calculated the average temperature taken from the specs here:
-            https://www.klaviyo.com/weather-app
-        """
-        url = '{api}{key}/almanac/q/{state}/{city}.json'.format(
-            api=settings.WUNDERGROUND['api_url'],
-            key=settings.WUNDERGROUND['key'],
-            state=city.state.abbreviation,
-            city=city.slug
-        )
-
-        try:
-            # TODO - validate the returned status code
-            resp = requests.get(url)
-            hist_data = resp.json()
-
-            norm_high = Decimal(hist_data.get('almanac').get('temp_high').get('normal').get('F'))
-            norm_low = Decimal(hist_data.get('almanac').get('temp_low').get('normal').get('F'))
-            return (norm_high + norm_low) / 2
-        except Exception:
-            # TODO - something here.
-            pass
-
-
-    def get_weather(self, city):
-        """
-            TODO - could this be moved to a lib/helper file somewhere?
-        """
-        url = '{api}{key}/conditions/q/{state}/{city}.json'.format(
-            api=settings.WUNDERGROUND['api_url'],
-            key=settings.WUNDERGROUND['key'],
-            state=city.state.abbreviation,
-            city=city.slug
-        )
-
-        try:
-            # TODO - validate the returned status code
-            resp = requests.get(url)
-            return resp.json()
-        except Exception:
-            # TODO - something here.
-            pass
 
 
 class EmailUsersPeriodicTask(PeriodicTask):
