@@ -12,7 +12,7 @@ tasks etc. but more on that to come.  Main thing we should consider is whatever 
 requests and get data back for multiple locations at once.
 
 ## weatheremail.emails.tasks
-### `EmailUsersPeriodicTask`
+### `EmailUsersPeriodicTask()`
 Using .iterator() is better for memory consumption - from the docs:
 "iterator() will read results directly, without doing any caching at the QuerySet"
 
@@ -27,7 +27,7 @@ it would be too hard to keep track of current place in rows.
 Also considering the ORM is doing basically nothing we could also write a raw query for PSQL, MySQL etc.
 if we saw any benefit from that.
 
-### `SendWeatherEmail`
+### `SendWeatherEmail()`
 So the main Task here - this is where we could make some pretty good and new architectural decisions.
 There's no reason we need to make API requests for the same actual location (not user location) more than once - meaning
 no point in making the same call for Boston, MA repeatedly.
@@ -50,3 +50,8 @@ gotten the data for yet.
 We obviously shouldn't use my personal gmail account with built in Django email functionality if
 we want to scale ;-)
 I assume we'd have a queue of emails with the HTML all rendered and reeady to go using a third party service.
+
+Also to note is the better performance of Django's `send_mass_mail()` detailed here:
+https://docs.djangoproject.com/en/1.10/topics/email/#send-mass-mail-vs-send-mail
+
+Also we could use the `EmailMessage` class for extra built in functionality.
