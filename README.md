@@ -45,6 +45,10 @@ In virtualenv (venv) cd into app:
 Then run:
 `./manage.py test`
 
+Also to get test coverage run:
+`coverage run --source='.' ./manage.py test`
+`coverage report`
+
 
 ## To run:
 In virtualenv (venv) cd into app:
