@@ -41,7 +41,7 @@ class WundergroundAPI(object):
             norm_high = Decimal(hist_data.get('almanac').get('temp_high').get('normal').get('F'))
             norm_low = Decimal(hist_data.get('almanac').get('temp_low').get('normal').get('F'))
             return (norm_high + norm_low) / 2
-        except Exception:
+        except Exception as exc:
             # Would be cool to use 'Exception Chaining' here - https://www.python.org/dev/peps/pep-3134/
             self.logger.warning('Unexpected wunderground exception - get_average_temp()', exc_info=True)
             raise WundergroundAPIException(str(exc))
