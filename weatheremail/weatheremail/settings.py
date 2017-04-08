@@ -137,6 +137,16 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': True,
         },
+        'weatheremail.base.signals': {
+            'handlers': ['app'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'weatheremail.base.tasks': {
+            'handlers': ['app'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
         'weatheremail.emails.tasks': {
             'handlers': ['app'],
             'level': 'DEBUG',
@@ -171,7 +181,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Celery/RabbitMQ Settings (currently just for dev.)
-BROKER_URL = "memory://localhost/"
+CELERY_BROKER_URL = "memory://localhost/"
 
 # Custom settings
 EMAIL_HOST = 'smtp.gmail.com'
@@ -185,4 +195,8 @@ FROM_EMAIL = 'c.russell.walker@gmail.com'
 WUNDERGROUND = {
     'api_url': 'http://api.wunderground.com/api/',
     'key': '4d870c66175b8c85',
+}
+
+STALE_DATA_DELTA = {
+    'days': 30
 }

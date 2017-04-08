@@ -5,6 +5,7 @@ from decimal import Decimal
 
 from django.conf import settings
 
+from base.tasks import UpsertHistoricalData
 
 class WundergroundAPIException(Exception):
     pass
@@ -40,8 +41,18 @@ class WundergroundAPI(object):
 
             norm_high = Decimal(hist_data.get('almanac').get('temp_high').get('normal').get('F'))
             norm_low = Decimal(hist_data.get('almanac').get('temp_low').get('normal').get('F'))
+
+
+            weather_data = {
+                'high_temp': norm_high,
+                'low_temp': norm_low,
+            }
+
+            UpsertHistoricalData.delay(city_slug=city_slug, weather_data=weather_data)
+            self.logger.info('API has queued up a HistoricalData entry task.')
+
             return (norm_high + norm_low) / 2
-        except Exception:
+        except Exception as exc:
             # Would be cool to use 'Exception Chaining' here - https://www.python.org/dev/peps/pep-3134/
             self.logger.warning('Unexpected wunderground exception - get_average_temp()', exc_info=True)
             raise WundergroundAPIException(str(exc))

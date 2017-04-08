@@ -1,7 +1,19 @@
 from __future__ import unicode_literals
 
+from datetime import timedelta
+
 from django.db import models
+from django.conf import settings
 from django.contrib.auth.models import User
+from django.utils import timezone
+
+
+class BaseModel(models.Model):
+    created = models.DateTimeField(auto_now_add=True, blank=False, editable=False)
+    updated = models.DateTimeField(auto_now=True, blank=False, editable=False)
+
+    class Meta:
+        abstract = True
 
 
 class State(models.Model):
@@ -47,6 +59,11 @@ class Location(models.Model):
     def __str__(self):
         return '{}, {}'.format(self.city.name, self.city.state.abbreviation)
 
+    @classmethod
+    def get_by_city_slug(cls, city_slug):
+        city_name = city_slug.replace('_', ' ')
+        return cls.objects.get(city=City.objects.get(name=city_name))
+
 
 class WeatherUser(User):
     user = models.OneToOneField(User)
@@ -61,4 +78,22 @@ class WeatherUser(User):
         if not self.username and self.email:
             self.username = self.email
         super(WeatherUser, self).save(*args, **kwargs)
+
+
+class HistoricalData(BaseModel):
+    """
+        This may currently be a misnomer since we're only going to store low and high temp to start
+    """
+    location = models.ForeignKey(Location)
+    high_temp = models.DecimalField(max_digits=5, decimal_places=2)
+    low_temp = models.DecimalField(max_digits=5, decimal_places=2)
+
+    class Meta:
+        db_table = 'historical_data'
+        app_label = 'base'
+
+    @property
+    def stale(self):
+        oldest_date = timezone.now() - timedelta(**settings.STALE_DATA_DELTA)
+        return self.updated < oldest_date
 
