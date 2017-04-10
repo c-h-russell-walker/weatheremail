@@ -8,7 +8,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
-from base.models import WeatherUser
+from base.models import WeatherUser, HistoricalData
 from libs.wunderground.api import WundergroundAPI, WundergroundAPIException
 from libs.wunderground.helpers import sunny, precipitating
 
@@ -38,10 +38,14 @@ class SendWeatherEmail(Task):
             msg_plain = render_to_string('weatheremail.txt', template_data)
             msg_html = render_to_string('weatheremail.html', template_data)
 
+            # TODO - confirm we can expect to always have `HistoricalData`
+            # Also see note about what should probably be a 1-1 rel. in the model def.
+            hist_data = HistoricalData.objects.get(location=user.location)
+
             subject = self.get_subject_line(
                 forecast_icon=curr_obsv.get('icon'),
                 curr_temp=Decimal(curr_obsv.get('temp_f')),
-                avg_temp=wapi.get_average_temp(state_abbrev=state_abbrev, city_slug=city_slug)
+                avg_temp=hist_data.average_temp
             )
 
             send_mail(

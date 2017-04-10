@@ -29,6 +29,9 @@ class State(models.Model):
 
 
 class City(models.Model):
+    # TODO - This shouldn't be using the name as the primary key
+    # What about Portland ME and Portland OR ?!
+    # We def. need to reasses the models here and even split some to other apps for clarity
     name = models.CharField(primary_key=True, max_length=100)
     state = models.ForeignKey(State)
 
@@ -83,6 +86,8 @@ class WeatherUser(User):
 class HistoricalData(BaseModel):
     """
         This may currently be a misnomer since we're only going to store low and high temp to start
+
+        TODO - should the `Location` be a one-to-one relationship?
     """
     location = models.ForeignKey(Location)
     high_temp = models.DecimalField(max_digits=5, decimal_places=2)
@@ -96,4 +101,8 @@ class HistoricalData(BaseModel):
     def stale(self):
         oldest_date = timezone.now() - timedelta(**settings.STALE_DATA_DELTA)
         return self.updated < oldest_date
+
+    @property
+    def average_temp(self):
+        return (self.high_temp + self.low_temp) / 2
 
