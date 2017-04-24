@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from base import views
+from weatheremail.base import views
 
 urlpatterns = [
     url(r'$',

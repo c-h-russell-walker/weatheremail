@@ -26,7 +26,7 @@ SECRET_KEY = '#(!=bhszvi)89w#1g+pw2()fbp+@4z6#6z$)!xy(%gv*m+d80w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -63,7 +63,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'weatheremail.urls'
+ROOT_URLCONF = 'weatheremail.weatheremail.urls'
 
 TEMPLATES = [
     {

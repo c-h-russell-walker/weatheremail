@@ -8,9 +8,9 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
-from base.models import WeatherUser
-from libs.wunderground.api import WundergroundAPI, WundergroundAPIException
-from libs.wunderground.helpers import sunny, precipitating
+from weatheremail.base.models import WeatherUser
+from weatheremail.libs.wunderground.api import WundergroundAPI, WundergroundAPIException
+from weatheremail.libs.wunderground.helpers import sunny, precipitating
 
 
 class SendWeatherEmail(Task):

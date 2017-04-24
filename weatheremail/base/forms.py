@@ -3,7 +3,7 @@ import logging
 from django import forms
 from django.core.exceptions import ValidationError
 
-from base.models import WeatherUser, Location
+from weatheremail.base.models import WeatherUser, Location
 
 
 class SignUpForm(forms.ModelForm):

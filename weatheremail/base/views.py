@@ -4,7 +4,7 @@ from django.utils.decorators import method_decorator
 from django.views.generic import View
 from django.views.decorators.csrf import csrf_protect
 
-from base.forms import SignUpForm
+from weatheremail.base.forms import SignUpForm
 
 
 class SignUpView(View):
