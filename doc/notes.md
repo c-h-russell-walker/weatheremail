@@ -47,11 +47,10 @@ gotten the data for yet.
 
 
 #### *MISC
-We obviously shouldn't use my personal gmail account with built in Django email functionality if
-we want to scale ;-)
-I assume we'd have a queue of emails with the HTML all rendered and reeady to go using a third party service.
+We obviously shouldn't use my personal gmail account with built in Django email functionality
+I assume we'd have a queue of emails with the HTML all rendered and ready to go using a third party service.
 
-Also to note is the better performance of Django's `send_mass_mail()` detailed here:
+Also to note: the better performance of Django's `send_mass_mail()` detailed here:
 https://docs.djangoproject.com/en/1.10/topics/email/#send-mass-mail-vs-send-mail
 
 Also we could use the `EmailMessage` class for extra built in functionality.
