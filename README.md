@@ -1,6 +1,6 @@
 # WeatherEmail
 
-For notes on some technical ideas about sacling this app please, [see this doc](./doc/notes.md).
+For notes on some technical ideas about scaling this app please, [see this doc](./doc/notes.md).
 
 ## What follows is a living document on setting up this app.
 
